@@ -1,0 +1,986 @@
+<html><head><title>Harris Recipe Library</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+BODY {
+background-color: #000000;
+font-family: arial;
+font-size: 14px;
+margin: 0px;
+}
+
+A {
+color: #000000;
+text-decoration: none;
+font-family: arial;
+font-size: 14px;
+font-weight: bold;
+}
+
+A:hover{
+color:#004099;
+text-decoration: none;
+}
+
+.classy {
+font-weight: bold;
+font-size: 18px;
+}
+
+.floater{
+position: fixed;
+left:20px;
+top:20px;
+width: 200px;
+height: 100px;
+background-color:#DDDDDD;
+border-color: #DDDDDD;
+visibility: hidden;
+}
+
+table, th, td {
+background-color:#DDDDDD;
+border: 1px solid #808080;
+border-collapse: collapse;
+border-spacing: 0;
+padding: 5px;
+font-family: arial;
+font-size: 14px;
+text-align: left;
+}
+
+th{
+color: #004099;
+background-color:#AAAAAA;
+}
+
+.fieldy{
+background:transparent;
+border:0px;
+}
+
+.arrow{
+background:transparent;
+border:0px;
+font-weight:bold;
+font-size:14px
+font-family:arial;
+}
+</style>
+
+<link rel="stylesheet" href="mobile.css" type="text/css" media="handheld">
+
+<script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="jquery.tablesorter.js"></script>
+<script type="text/javascript">
+function byebye(){
+document.getElementById('info').style.visibility='hidden';
+}
+
+function show() {
+document.getElementById('timey').value=t;
+document.getElementById('sourcey').value=s1;
+document.getElementById('sourcey2').value=s2;
+document.getElementById('info').style.visibility='visible';
+}
+$(document).ready(function()
+{
+$("#myTable").tablesorter();
+}
+);
+</script>
+
+<base target="_blank">
+
+</head>
+
+<body>
+<table class="floater" id="info">
+<tr>
+ <td valign="top"><div align="right"><input type="button" class="arrow" value="CLOSE" onclick="byebye();"></div>
+<nobr>Time: <input type="button" class="fieldy" id="timey"></nobr><br>
+<input type="button" class="fieldy" id="sourcey" onclick="window.open(u1);"><br>
+<input type="button" class="fieldy" id="sourcey2" onclick="window.open(u2);"></td></tr></table>
+
+<div align="center">
+
+<!--
+ <td><input type="button" class="arrow" value=">" onclick="show(t='',s1='',u1='',s2='',u2='');"></td>
+-->
+
+<table id="myTable" class="tablesorter">
+<thead>
+<tr>
+ <th>Recipe Name</th>
+ <th>Category</th>
+ <th>Meat</th>
+ <th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+ <td><a href="all-american meat loaf.pdf">All-American Meat Loaf</a></td>
+ <td>Entree</td>
+ <td>Beef</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='1 hour',s1='Jim and Mary Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="andes mint cupcakes.pdf">Andes Mint Cupcakes</a></td>
+ <td>Dessert</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='Hours!',s1='Your Cup of Cake',u1='http://www.yourcupofcake.com/2011/05/andes-mint-cupcakes.html',s2='Mels Kitchen Cafe',u2='http://www.melskitchencafe.com/2011/09/over-the-top-andes-mint-cupcakes.html');"></td>
+</tr>
+<tr>
+ <td><a href="Apple Berry Salsa.pdf">Apple Berry Salsa</a></td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='20 minutes?',s1='Paula Hayes',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Apple Butter.pdf">Apple Butter</a></td>
+ <td>Sauce	</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Cheryl Cecil',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="artichoke casserole.pdf">Artichoke Casserole</a></td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='45 minutes',s1='Jim and Mary Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Artichoke Dip.pdf">Artichoke Dip</a></td>
+ <td>Appetizer</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Bonnie Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="authentic guacamole.pdf">Authentic Guacamole</a></td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='10-15 minutes',s1='',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="avocado soup2.pdf">Avocado Soup</a></td>
+ <td>Soup</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='30 minutes',s1='ABC',u1='http://abcnews.go.com/GMA/recipe?id=9536043',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="avocado soup1.pdf">Avocado Soup with Citrus-Shrimp Relish</a></td>
+ <td>Soup</td>
+ <td>Shrimp</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='10 minutes or so',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="baked ziti.pdf">Baked Ziti and Summer Veggies</a></td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='40 minutes',s1='MyRecipes',u1='http://www.myrecipes.com/recipe/baked-ziti-summer-veggies-50400000113735/print/',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="beef stew.pdf">Beef Stew</a></td>
+ <td>Soup</td>
+ <td>Beef</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='4+ hours',s1='Cookbook / Jim and Mary Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="beef stroganoff.pdf">Beef Stroganoff</a></td>
+ <td>Entree</td>
+ <td>Beef/Steak</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='45 minutes',s1='Food Network',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Berries and Mascarpone Cheese.pdf">Berries & Mascarpone Cheese</a></td>
+ <td>Dessert</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Bonnie Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Berry Crumble.pdf">Berry Crumble</a></td>
+ <td>Dessert</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='55 minutes',s1='Food Network',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Best Bran Muffins.pdf">Best Bran Muffins</a></td>
+ <td>Dessert</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='30 minutes',s1='The Laurels Kitchen Bread Book',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="bistro chicken.pdf">Bistro Chicken</a></td>
+ <td>Entree</td>
+ <td>Chicken</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='1 hour 10 minutes',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Black Bean, Corn, and Shrimp Salad 1.pdf">Black Bean, Corn, and Shrimp Salad 1</a></td>
+ <td>Salad</td>
+ <td>Shrimp</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='MyRecipes',u1='http://www.myrecipes.com/recipe/black-bean-corn-shrimp-salad-10000001072198/',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Black Bean, Corn, and Shrimp Salad 2.pdf">Black Bean, Corn, and Shrimp Salad 2</a></td>
+ <td>Salad</td>
+ <td>Shrimp</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='MyRecipes',u1='http://www.myrecipes.com/recipe/bean-corn-shrimp-salad-50400000122795/',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="breakfast casserole.pdf">Breakfast Casserole</a></td>
+ <td>Entree</td>
+ <td>Sausage</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='1 hour',s1='Cookbook',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Broccoli Cheese Bake.pdf">Brocooli Cheese Bake</a></td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='45 minutes',s1='AllRecipes',u1='http://allrecipes.com/Recipe-Tools/Print/Recipe.aspx?recipeID=20516&origin=detail&servings=7&metric=false',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="brunswick stew.pdf">Brunswick Stew</a></td>
+ <td>Soup</td>
+ <td>Pork</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='10+ hours',s1='Glenn Hengst / Jim and Mary Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="butternut orzo.pdf">Butternut Orzo</a></td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='20 minutes?',s1='Simply in Season',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Cheese Ball.pdf">Cheese Balls</a></td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Jim and Mary Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="cheesecake.pdf">Cheesecake (marbled)</a></td>
+ <td>Dessert</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='3 hours',s1='Cindy Orner',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Cheesy Shrimp and Grits.pdf">Cheesy Shrimp and Grits Casserole</a></td>
+ <td>Entree</td>
+ <td>Shrimp</td>
+ <td></td>
+</tr>
+<tr>
+ <td><a href="Chicken Gumbo.pdf">Chicken Gumbo</a></td>
+ <td>Soup</td>
+ <td>Chicken</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='2 hours + overnight',s1='George Sarris / Jim and Mary Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="chicken mushroom quesadillas.pdf">Chicken, Mushroom, and Gruyere Quesadillas</a></td>
+ <td>Entree</td>
+ <td>Chicken</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='10-15 minutes',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Chicken Pitas.pdf">Chicken Pitas</a></td>
+ <td>Entree</td>
+ <td>Chicken</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='10-15 minutes',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Chicken Pot Pie.pdf">Chicken Pot Pie (Hurry Up)</a></td>
+ <td>Entree</td>
+ <td>Chicken</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='40 minutes',s1='Food Network',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="chicken spaghetti.pdf">Chicken Spaghetti</a></td>
+ <td>Entree</td>
+ <td>Chicken</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='30 minutes',s1='Jim and Mary Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="chicken stock.pdf">Chicken Stock</a></td>
+ <td>Soup</td>
+ <td>Chicken</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='1 hour',s1='Cooks Illustrated',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="chicken tetrazzini.pdf">Chicken Tetrazzini</a></td>
+ <td>Entree</td>
+ <td>Chicken</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='45 minutes',s1='Debbie Deason',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="chicken with pesto.pdf">Chicken with Pistachio-Parsley Pesto</a></td>
+ <td>Entree</td>
+ <td>Chicken</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='25 minutes',s1='Food Network',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Chili.pdf">Chili</a></td>
+ <td>Entree</td>
+ <td>Beef</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Ree Drummond',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Coleslaw.pdf">Coleslaw</a></td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='15 minutes',s1='MyRecipes',u1='http://www.myrecipes.com/m/recipe/crunchy-creamy-coleslaw-50400000123300/',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="cowboy cavier.pdf">Cowboy Cavier</a></td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='25 minutes',s1='Bonnie Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="cream cheese frosting.pdf">Cream Cheese Frosting</a></td>
+ <td>Dessert</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Debbie Deason',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Creamed Spinach & Mushrooms.pdf">Creamed Spinach & Mushrooms</a></td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='MyRecipes',u1='http://www.myrecipes.com/recipe/creamed-spinach-mushrooms-50400000120259/',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="crock pot greek chicken.pdf">Crock Pot Greek Chicken</a></td>
+ <td>Entree</td>
+ <td>Chicken</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='2 hours?',s1='Charles Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="cucumber avocado salsa.pdf">Cucumber Avocado Salsa</a></td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='5-10 minutes',s1='MyRecipes',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Curried Chicken Salad.pdf">Curried Chicken Salad</a></td>
+ <td>Salad</td>
+ <td>Chicken</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Health.com',u1='http://www.health.com/health/recipe/0,,10000001891979,00.html',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Deviled Eggs.pdf">Deviled Eggs</a></td>
+ <td>Appetizer</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Bonnie Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Dump Cake.pdf">Dump Cake</a></td>
+ <td>Dessert</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Bonnie Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Fish Tacos.jpg">Fish Tacos</a></td>
+ <td>Entree</td>
+ <td>Fish</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Simply in Season',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="french toast.pdf">French Toast</a></td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Danny Harris',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Fresh Green Beans.pdf">Fresh Green Beans</a></td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Pioneer Woman',u1='http://www.thepioneerwoman.com',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="fried chicken.pdf">Fried Chicken</a></td>
+ <td>Entree</td>
+ <td>Chicken</td>
+ <td></td>
+</tr>
+<tr>
+ <td><a href="fried pickles.pdf">Fried Pickles</a></td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='AllRecipes',u1='http://allrecipes.com/recipe/fried-pickles/',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Fried Rice.pdf">Fried Rice</a></td>
+ <td>Entree</td>
+ <td>Varies</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Dana Webster',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Fruit Salad.pdf">Fruit Salad with Nutmeg-Cinnamon Syrup</a></td>
+ <td>Salad</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='20 minutes',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="garlic cheese biscuits.pdf">Garlic Cheese Biscuits</a></td>
+ <td>Side</td>
+ <td></td>
+ <td></td>
+</tr>
+<tr>
+ <td><a href="glazed pecans.pdf">Glazed Pecans</a></td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='1 hour',s1='Debbie Deason',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="granola.pdf">Granola</a></td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='1 hour',s1='Charles Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Green Bean Casserole.pdf">Green Bean Casserole</a></td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Can / Jim and Mary Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Grilled Chicken and Tomato Salad.pdf">Grilled Chicken and Tomato Salad</a></td>
+ <td>Salad</td>
+ <td>Chicken</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='20 minutes',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Grilled Lime Shrimp.pdf">Grilled Lime Shrimp</a></td>
+ <td>Side</td>
+ <td>Shrimp</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Food.com',u1='http://www.food.com/recipe/grilled-lime-shrimp-43737',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Grilled Salmon.pdf">Grilled Salmon</a></td>
+ <td>Entree</td>
+ <td>Salmon</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='AllRecipes',u1='http://allrecipes.com/Recipe/Grilled-Salmon-I/Detail.aspx?event8=1&prop24=SR_Thumb&e11=grilled%20salmon&e8=Quick%20Search&event10=1&e7=Home%20Page',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="salmon with salsa.pdf">Grilled Wild Salmon with Cucumber-Avocado Salsa</a></td>
+ <td>Entree</td>
+ <td>Salmon</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='35 minutes',s1='MyRecipes',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Hamburgers.pdf">Hamburgers</a></td>
+ <td>Entree</td>
+ <td>Beef</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Trial and Error',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="hearty broccoli soup.pdf">Hearty Broccoli Soup</a></td>
+ <td>Soup</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Simply in Season',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="herbed chicken parmesan.pdf">Herbed Chicken Parmesan</a></td>
+ <td>Entree</td>
+ <td>Chicken</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='MyRecipes',u1='http://www.myrecipes.com/recipe/herbed-chicken-parmesan-10000000549982/',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="hot and sour soup with shrimp.pdf">Hot and Sour Soup with Shrimp</a></td>
+ <td>Soup</td>
+ <td>Shrimp</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='20 minutes?',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Ice Cream.pdf">Ice Cream</a></td>
+ <td>Dessert</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Nanny Morris',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Italian Baked Chicken and Pastina.pdf">Italian Baked Chicken and Pastina</a></td>
+ <td>Entree</td>
+ <td>Chicken</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='55 minutes',s1='Food Network',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Italian Chili.pdf">Italian Chili</a></td>
+ <td>Soup</td>
+ <td>Beef</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Jim and Mary Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Japanese Chicken Wings.pdf">Japanese Chicken Wings</a></td>
+ <td>Entree</td>
+ <td>Chicken</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='1 hour',s1='AllRecipes.com',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Joy Chocolate Cake.pdf">Joy Chocolate Cake</a></td>
+ <td>Dessert</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Betsy Childs',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="LA Burger.pdf">L.A. Burger</a></td>
+ <td>Entree</td>
+ <td>Beef</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='17 minutes',s1='Food Network',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="lembas.pdf">Lembas Bread</a></td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='10 minutes',s1='Geeky Chef',u1='http://www.geekychef.com/2008/12/elven-lembas-bread.html',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="lembas2.pdf">Lembas Bread #2</a></td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='15-20 minutes',s1='Here',u1='http://www.entropyhouse.com/penwiper/costumes/lembas.html',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Lemon Basil Shrimp and Pasta.pdf">Lemon Basil Shrimp and Pasta</a></td>
+ <td>Entree</td>
+ <td>Shrimp</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='15-20 minutes',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Lemon Pasta with Chicken.pdf">Lemon Pasta with Chicken</a></td>
+ <td>Entree</td>
+ <td>Chicken</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='35 minutes',s1='Food Network',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="orzo-veggie salad with ckn.pdf">Lemony Orzo-Veggie Salad with Chicken</a></td>
+ <td>Salad</td>
+ <td>Chicken</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='20 minutes',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Butternut Squash Mac & Cheese.pdf">Mac & Cheese</a> (Butternut Squash)</td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='45 minutes',s1='Two Peas and Their Pod',u1='http://www.twopeasandtheirpod.com/butternut-squash-mac-and-cheese/',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="mac and cheese - charles.pdf">Mac & Cheese</a> (Charles)</td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='1 hour',s1='Charles Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="mac and cheese - mary.pdf">Mac & Cheese</a> (Jim & Mary)</td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='2 hours 10 minutes',s1='Jim and Mary Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Magic Cookie Bars.pdf">Magic Cookie Bars</a></td>
+ <td>Dessert</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='45 minutes',s1='Jim and Mary Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="mashed sweet potatoes.pdf">Mashed Sweet Potatoes</a></td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Cooks Illustrated',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="meatballs.pdf">Meatballs</a></td>
+ <td>Side</td>
+ <td>Beef</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='10-15 minutes',s1='The Morellos',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="mediterranean chicken.pdf">Mediterranean Chicken with Potatoes</a></td>
+ <td>Entree</td>
+ <td>Chicken</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='1 hour 10 minutes',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="mediterranean salmon salad.pdf">Mediterranean Salmon Salad</a></td>
+ <td>Salad</td>
+ <td>Salmon</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='20-25 minutes',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="minestrone.pdf">Minestrone Soup</a></td>
+ <td>Soup</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='52 minutes',s1='Bonnie Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Oven cooked brisket.pdf">Oven Cooked Brisket</a></td>
+ <td>Brisket</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='A long time',s1='Mrs. Weavers',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="pan roasted asparagus.pdf">Pan Roasted Asparagus</a></td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Cooks Illustrated',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="pan roasted broccoli.pdf">Pan Roasted Broccoli</a></td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Cooks Illustrated',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Pasta Eggplant Sauce.pdf">Pasta Eggplant Sauce</a></td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='8+ hours',s1='Molly Palmer',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="pasta with tomato-basil.pdf">Pasta with Fresh Tomato-Basil Sauce</a></td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='20 minutes',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="pasta with prosciutto and spinach.pdf">Pasta with Prosciutto and Spinach</a></td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='20 minutes?',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Peach Cobbler.pdf">Peach Cobbler</a></td>
+ <td>Dessert</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Paula Deen',u1='http://www.pauladeen.com/recipes/recipe_view/peach_cobbler/',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Penne with Asparagus Spinach and Bacon.pdf">Penne with Asparagus, Spinach, and Bacon</a></td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='15-20 minutes',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Pesto Caesar Salad.pdf">Pesto Caesar Salad</a></td>
+ <td>Salad</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='20 minutes?',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Pork Apple Stew.pdf">Pork Apple Stew</a></td>
+ <td>Salad</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Jennifer Harris',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="pound cake.pdf">Pound Cake</a></td>
+ <td>Dessert</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='2 hours',s1='Mary Pritchard',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Pumpkin Bread.pdf">Pumpkin Bread</a></td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='1 hour',s1='Mellie Bassett',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="http://www.momswhothink.com/easy-recipes/puppy-chow-recipe.html">Puppy Chow</a></td>
+ <td>Dessert</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Moms Who Think',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td>Quinoa Salad in a Jar:<br>- <a href="Quinoa Salad - Asian.pdf">Asian</a><br>- <a href="Quinoa Salad - Curry.pdf">Curry</a><br>- <a href="Quinoa Salad - Fiesta.pdf">Fiesta</a><br>- <a href="Quinoa Salad - Mediterranean.pdf">Med.</a></td>
+ <td>Salad</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='The Yummy Life',u1='http://www.theyummylife.com/Quinoa_Salad_In_A_Jar/',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="ravioli.pdf">Ravioli</a></td>
+ <td>Entree</td>
+ <td>Beef</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='The Morellos',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Rice Bake Casserole.pdf">Rice Bake Casserole</a></td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='50 minutes',s1='Food Network',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Roasted Pumpkin Seeds.pdf">Roasted Pumpkin Seeds</a></td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='45 minutes',s1='Simply Recipes',u1='http://www.simplyrecipes.com/recipes/toasted_pumpkin_seeds/',s2='',u2='');">&gt;</a></td>
+</tr>
+<tr>
+ <td><a href="Roast Turkey.pdf">Roasted Turkey</a></td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='Hours!',s1='Simply Recipes',u1='http://www.simplyrecipes.com/recipes/moms_roast_turkey/',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Roasted Shrimp and Orzo.pdf">Roasted Shrimp and Orzo</a></td>
+ <td>Entree</td>
+ <td>Shrimp</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='1 hour 35 minutes',s1='Food Network',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="roasted veggie-rosemary ckn soup.pdf">Roasted Vegetable-Rosemary Chicken Soup</a></td>
+ <td>Soup</td>
+ <td>Chicken</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='2 hours 15 minutes',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Rosemary Chicken Noodle Soup.pdf">Rosemary Chicken Noodle Soup</a></td>
+ <td>Soup</td>
+ <td>Chicken</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='1 hour',s1='MyRecipes',u1='http://www.myrecipes.com/recipe/rosemary-chicken-noodle-soup-10000001160571/',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Rotini with Salsa di Limone.pdf">Rotini with Salsa di Limone</a></td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='30 minutes',s1='Food Network',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Salmon Skewers.pdf">Salmon Skewers</a></td>
+ <td>Entree</td>
+ <td>Salmon</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='MyRecipes',u1='http://www.myrecipes.com/recipe/salmon-skewers-with-lemon-parsley-pesto-10000001654676/',s2='',u2='');"></td>
+</tr>
+
+<tr>
+ <td><a href="Sausage and Apples.jpg">Sausage and Apples</a></td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Simply in Season',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Sausage Scramble.pdf">Sausage Scramble</a></td>
+ <td>Entree</td>
+ <td>Sausage</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Bonnie Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="sausage stew.pdf">Sausage Stew</a></td>
+ <td>Soup</td>
+ <td>Sausage</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='45 minutes',s1='MyRecipes',u1='http://www.myrecipes.com/recipe/chicken-sausage-stew-50400000119688/',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="salmon on mashed peas.pdf">Seared Salmon on Herbed Mashed Peas</a></td>
+ <td>Entree</td>
+ <td>Salmon</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='30 minutes?',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="shrimp orzo tomatoes.pdf">Shrimp and Orzo with Cherry Tomatoes and Romano Cheese</a></td>
+ <td>Entree</td>
+ <td>Shrimp</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='15 minutes?',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="shrimp and wild rice casserole.pdf">Shrimp and Wild Rice Casserole</a></td>
+ <td>Entree</td>
+ <td>Shrimp</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='1 hour 10 minutes',s1='Food Network',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="shrimp fried rice.pdf">Shrimp Fried Rice</a></td>
+ <td>Entree</td>
+ <td>Shrimp</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='15 minutes?',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="spaghetti sauce.pdf">Spaghetti Sauce</a></td>
+ <td>Entree</td>
+ <td>Sausage (opt.)</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='2 hours 15 minutes',s1='The Morellos',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Spicy Ranch Crackers.pdf">Spicy Ranch Crackers</a></td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='2 hours',s1='Bekah Wood',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="spinach artichoke dip.pdf">Spinach and Artichoke Dip</a></td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='My Recipes',u1='http://www.myrecipes.com/recipe/spinach-and-artichoke-dip-10000001654698/',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="quiche - spinach and swiss.pdf">Spinach and Swiss Quiche</a></td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='45 minutes',s1='Recipe.com',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="quiche - Spinach Red Pepper and Feta.pdf">Spinach, Red Pepper, and Feta Quiche</a></td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='1 hour 5 minutes',s1='Food Network',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="squash casserole.pdf">Squash Casserole</a></td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='45 minutes',s1='MyRecipes',u1='http://www.myrecipes.com/recipe/yellow-squash-casserole-10000000226084/',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="squash gratin.pdf">Squash Gratin</a></td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='45 minutes',s1='MyRecipes',u1='http://www.myrecipes.com/recipe/yellow-squash-gratin-10000000604777/',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Stuffed Beef Tenderloin.pdf">Stuffed Beef Tenderloin</a></td>
+ <td>Entree</td>
+ <td>Beef</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='1 hour 20 minutes',s1='Food Network',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="stuffed peppers.pdf">Stuffed Bell Peppers</a> (couscous and feta)</td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Smitten Kitchen',u1='http://smittenkitchen.com/blog/2007/09/couscous-and-feta-stuffed-peppers/',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="stuffed cheese shells.pdf">Stuffed Cheese Shells</a> (a.k.a. Old World Manicotti)</td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='35-45 minutes',s1='Aunt June / Jim and Mary Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="stuffed mushrooms1.pdf">Stuffed Mushrooms 1</a></td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='35 minutes',s1='Food.com',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="stuffed mushrooms2.pdf">Stuffed Mushrooms 2</a></td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='45 minutes',s1='AllRecipes',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="sweet and sour meatballs.pdf">Sweet and Sour Meatballs</a></td>
+ <td>Side</td>
+ <td>Beef</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='Simmer all day',s1='Cookbook / Jim and Mary Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Sweet Orange Salmon.pdf">Sweet Orange Salmon</a></td>
+ <td>Entree</td>
+ <td>Salmon</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='10 minutes',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="sweet potato casserole.pdf">Sweet Potato Casserole</a></td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='1 hour 30 minutes',s1='Website + Laura innovation',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="taco seasoning.pdf">Taco Seasoning</a></td>
+ <td>Side</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='Super fast',s1='?',u1='',s2='',u2='');"></td>
+</tr>
+
+<tr>
+ <td><a href="taco soup.pdf">Taco Soup</a></td>
+ <td>Soup</td>
+ <td>Beef</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='53 minutes',s1='Cookbook / Jim and Mary',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Thai Seafood Salad.pdf">Thai Seafood Salad</a></td>
+ <td>Salad</td>
+ <td>Seafood</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='20 minutes',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="thai shrimp and chicken soup.pdf">Thai Shrimp and Chicken Soup</a></td>
+ <td>Soup</td>
+ <td>Chicken and Shrimp</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='20 minutes',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Tomato Basil Soup.pdf">Tomato Basil Soup</a></td>
+ <td>Soup</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="tomato pasta salad.pdf">Tomato Pasta Salad</a> (multiple recipes)</td>
+ <td>Salad</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Cooks Illustrated',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="tropical salad with shrimp.pdf">Tropical Chopped Salad with Shrimp</a></td>
+ <td>Salad</td>
+ <td>Shrimp</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='10 minutes or less',s1='Cooking Light',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Vegetable Chili.pdf">Vegetable Chili</a></td>
+ <td>Soup</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='1 hour 40 minutes',s1='Julie / Jim and Mary Morello',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Vegetarian Chili.pdf">Vegetarian Chili</a> (MyRecipes)</td>
+ <td>Soup</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='1 hour',s1='MyRecipes',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="Vegetarian Chili.jpg">Vegetarian Chili</a> (Simply in Season)</td>
+ <td>Soup</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='Simply in Season',u1='h',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="veggie lasagna.pdf">Veggie Lasagna</a></td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='1 hour 30 minutes',s1='Online',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="white bean chili.pdf">White Bean Chili</a></td>
+ <td>Soup</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='30 min + overnight + 2 hours 20 min',s1='Cookbook / Jim and Mary',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="White Bean & Asparagus Salad.pdf">White Bean & Asparagus Salad</a></td>
+ <td>Salad</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='?',s1='MyRecipes',u1='http://www.myrecipes.com/recipe/white-bean-and-asparagus-salad-10000001041983/',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="White Chicken Chili.pdf">White Chicken Chili</a></td>
+ <td>Soup</td>
+ <td>Chicken</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='55 minutes',s1='FoodNetwork.com',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="white lightning ckn chili.pdf">White Lightning Chicken Chili</a></td>
+ <td>Soup</td>
+ <td>Chicken</td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='1 hour 15 minutes',s1='Molly Palmer',u1='',s2='',u2='');"></td>
+</tr>
+<tr>
+ <td><a href="wild mushroom risotto.pdf">Wild Mushroom Risotto</a></td>
+ <td>Entree</td>
+ <td></td>
+ <td><input type="button" class="arrow" value=">" onclick="show(t='45-55 minutes',s1='Recipe.com',u1='',s2='',u2='');"></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</body></html>
