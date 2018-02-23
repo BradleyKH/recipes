@@ -1,0 +1,271 @@
+<html><head><title>Sausage Recipe Calculator</title>
+<meta name="viewport" content="width=device-width, initial-scale=0.75">
+
+<style type="text/css">
+BODY {
+background-color: #808080;
+font-family: arial;
+font-size: 20px;
+}
+
+.full {
+width: 100%;
+height: 100%;
+text-align: center;
+}
+
+.full td {
+text-align: center;
+vertical-align: middle;
+}
+
+.content {
+border-collapse: collapse;
+display: inline;
+}
+
+.content th {
+border: 10px solid black;
+padding: 5px;
+font-family: arial;
+font-size: 24px;
+font-weight: bold;
+background-color: white;
+cursor: hand;
+}
+
+.content td {
+border: 10px solid black;
+padding: 10px;
+font-family: arial;
+font-size: 16px;
+font-weight: normal;
+background-color: white;
+text-align: left;
+vertical-align: top;
+cursor: default;
+}
+
+.field {
+width: 100px;
+font-size: 16px;
+}
+
+.button {
+font-family: arial;
+font-size: 16px;
+}
+
+.spicy {
+border: 0px;
+border-collapse: collapse;
+}
+
+.spicy td {
+border: 0px;
+border-collapse: collapse;
+vertical-align: top;
+}
+
+.mild {
+border: 0px;
+border-collapse: collapse;
+}
+
+.mild td {
+border: 0px;
+border-collapse: collapse;
+vertical-align: top;
+font-size: 16px;
+text-align: left;
+padding: 5px;
+}
+
+.mild th {
+border: 0px;
+border-collapse: collapse;
+vertical-align: top;
+font-size: 16px;
+text-align: left;
+padding: 5px;
+}
+</style>
+
+<script language="Javascript">
+
+var sausageTypes = ["Brats","Breakfast","Italian"];
+var families = ["Brad","Charles","Frank","Jerry","Ross"];
+
+var ingredientsBrats = [
+["Brad's Kosher Salt","White Pepper","Marjoram","Carraway Seed","Nutmeg","Allspice","Ginger","Garlic Powder","Red Pepper Flakes"],
+["Kosher Salt","White Pepper","Marjoram","Carraway Seed","Nutmeg","Allspice","Ginger","Garlic Powder","Red Pepper Flakes"],
+["Frank's Kosher Salt","White Pepper","Marjoram","Carraway Seed","Nutmeg","Allspice","Ginger","Garlic Powder","Red Pepper Flakes"],
+["Jerry's Kosher Salt","White Pepper","Marjoram","Carraway Seed","Nutmeg","Allspice","Ginger","Garlic Powder","Red Pepper Flakes"],
+["Ross' Kosher Salt","White Pepper","Marjoram","Carraway Seed","Nutmeg","Allspice","Ginger","Garlic Powder","Red Pepper Flakes"],
+];
+
+var ingredientsBreakfast = [
+["Brad's Kosher Salt","White Pepper","Marjoram","Carraway Seed","Nutmeg","Allspice","Ginger","Garlic Powder","Red Pepper Flakes"],
+["Kosher Salt","White Pepper","Marjoram","Carraway Seed","Nutmeg","Allspice","Ginger","Garlic Powder","Red Pepper Flakes"],
+["Frank's Kosher Salt","White Pepper","Marjoram","Carraway Seed","Nutmeg","Allspice","Ginger","Garlic Powder","Red Pepper Flakes"],
+["Jerry's Kosher Salt","White Pepper","Marjoram","Carraway Seed","Nutmeg","Allspice","Ginger","Garlic Powder","Red Pepper Flakes"],
+["Ross' Kosher Salt","White Pepper","Marjoram","Carraway Seed","Nutmeg","Allspice","Ginger","Garlic Powder","Red Pepper Flakes"],
+];
+
+var ingredientsItalian = [
+["Brad's Kosher Salt","White Pepper","Marjoram","Carraway Seed","Nutmeg","Allspice","Ginger","Garlic Powder","Red Pepper Flakes"],
+["Kosher Salt","White Pepper","Marjoram","Carraway Seed","Nutmeg","Allspice","Ginger","Garlic Powder","Red Pepper Flakes"],
+["Frank's Kosher Salt","White Pepper","Marjoram","Carraway Seed","Nutmeg","Allspice","Ginger","Garlic Powder","Red Pepper Flakes"],
+["Jerry's Kosher Salt","White Pepper","Marjoram","Carraway Seed","Nutmeg","Allspice","Ginger","Garlic Powder","Red Pepper Flakes"],
+["Ross' Kosher Salt","White Pepper","Marjoram","Carraway Seed","Nutmeg","Allspice","Ginger","Garlic Powder","Red Pepper Flakes"],
+];
+
+// Ingredient ratios: amounts in tsp for every 12 pounds - eventually need to make 12 another variable
+var ratiosBrats = [
+	[8,8,8,8,8,8,8,8,8], [12,8,4,2,2,2,1,9,2], [2,2,2,2,2,2,2,2,2], [3,3,3,3,3,3,3,3,3], [4,4,4,4,4,4,4,4,4]
+];
+var ratiosBreakfast = [
+	[5,5,5,5,5,5,5,5,5], [6,6,6,6,6,6,6,6,6], [7,7,7,7,7,7,7,7,7], [8,8,8,8,8,8,8,8,8], [9,9,9,9,9,9,9,9,9]
+];
+var ratiosItalian = [
+	[5,5,5,5,5,5,5,5,5], [6,6,6,6,6,6,6,6,6], [7,7,7,7,7,7,7,7,7], [8,8,8,8,8,8,8,8,8], [9,9,9,9,9,9,9,9,9]
+];
+
+var ratios = [ratiosBrats, ratiosBreakfast, ratiosItalian];
+var ingredients = [ingredientsBrats, ingredientsBreakfast, ingredientsItalian];
+	
+function round(value, decimals){
+	return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
+}
+
+function convert(tsp){
+
+/*
+	1 tbsp = 3 tsp
+	1 cup = 16 tbsp
+	1 gallon = 16 cups
+*/
+
+	var units = ["gal","cups","tbsp","tsp"];
+	var measurement = "";
+	var gallons = 0;
+	var cups = 0;
+	var tbsp = 0;
+	
+	gallons = Math.floor(tsp / (3*16*16));
+	tsp = tsp - (gallons*3*16*16);
+	cups = Math.floor(tsp / (3*16));
+	tsp = tsp - (cups*3*16);
+	tbsp = Math.floor(tsp / 3);
+	tsp = tsp - (tbsp*3);
+
+	if (tbsp >= 8) {   // greater than half a cup, add 0.5 to cups and subtract 8 from tbsp
+		cups += 0.5;
+		tbsp -= 8;
+	}
+
+	var unitComponents = [gallons, cups, tbsp, tsp];
+
+	// cups or cup
+	if (cups == 1) {
+		units[1] = "cup";
+	}
+
+	for (i = 0; i < 4; i++) {
+		if (unitComponents[i] != 0) {
+			measurement += round(unitComponents[i], 2) + " " + units[i] + " ";
+		}
+	}
+
+	return measurement;
+}
+
+function calculate() {
+
+	var ingredientsList = "<table class=\"mild\">";
+	var pounds = document.getElementById('amount').value;
+	var selectedSausage = document.getElementById('sausage').value;
+	var selectedFamily = document.getElementById('family').value;
+	
+	for (s = 0; s < ingredients[selectedSausage][selectedFamily].length; s++) {
+		ingredientsList += "<tr><th>" + ingredients[selectedSausage][selectedFamily][s] + ":</th><td>" + convert(pounds*ratios[selectedSausage][selectedFamily][s]/12) + "</td></tr>";
+	}
+	
+	ingredientsList += "</table>"
+	document.getElementById('bags').value = Math.ceil(pounds/document.getElementById('bagweight').value);
+	document.getElementById('sausageType').innerHTML = "<b>" + sausageTypes[selectedSausage] + " Recipe from " + families[selectedFamily] + "<br>Quantity:</b> " + pounds + " lbs<br>";
+	document.getElementById('ingredients').innerHTML = ingredientsList;
+}
+
+</script>
+
+</head>
+
+<body onload="calculate();">
+
+<table class="full">
+<tr><td>
+
+<table class="content">
+<tr>
+<th colspan="2">Sausage Recipe Calculator</th>
+</tr>
+<tr>
+<td>
+
+<table class="spicy">
+<tr>
+<td>Family recipe</td>
+<td>
+
+<select id="family" class="field" onchange="calculate();">
+<option value="0">Brad</option>
+<option value="1" selected>Charles</option>
+<option value="2">Frank</option>
+<option value="3">Jerry</option>
+<option value="4">Ross</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Sausage type:</td>
+<td>
+
+<select id="sausage" class="field" onchange="calculate();">
+<option value="0">Brats</option>
+<option value="1">Breakfast</option>
+<option value="2">Italian</option>
+</select>
+
+</td>
+</tr>
+<tr>
+<td>Total weight:</td>
+<td><input id="amount"  class="field" type="text" size="5" value="50"> lbs</td>
+</tr>
+<tr>
+<td>Weight per bag:</td>
+<td><input id="bagweight"  class="field" type="text" size="5" value="2"> lbs</td>
+</tr>
+<tr>
+<td>Bags needed:</td>
+<td><input id="bags"  class="field" style="border:0px" type="text" size="5" value="" readonly></td>
+</tr>
+<tr>
+<td colspan="2"><input class="button" type="button" value="Calculate" onclick="calculate();"></td>
+</tr>
+</table>
+
+</td>
+
+<td>
+
+<table class="mild"><tr><td><span id="sausageType"></span></td></tr></table><br>
+
+<span id="ingredients"></span></td>
+
+</tr></table>
+
+</td></tr></table>
+</body></html>
