@@ -7,6 +7,7 @@ background-color: #000000;
 background-image: url('pigs.jpg');
 background-attachment: fixed;
 background-position: center center;
+background-repeat: no-repeat;
 font-family: arial;
 font-size: 20px;
 }
@@ -206,17 +207,13 @@ function calculate() {
 
 <body onload="calculate();">
 
-<table class="full">
-<tr><td>
+<table class="full"><tr><td>
 
-<table class="container">
-<tr><td>
+<table class="container"><tr><td>
 
 <div class="title">Sausage Recipe Calculator</div><br><br>
 
-<table class="content">
-<tr>
-<td>
+<table class="content"><tr><td>
 
 <table class="spicy">
 <tr>
@@ -230,8 +227,7 @@ function calculate() {
 <option value="3">Jerry</option>
 <option value="4">Ross</option>
 </select>
-</td>
-</tr>
+</td></tr>
 
 <tr>
 <td>Sausage type:</td>
@@ -243,8 +239,8 @@ function calculate() {
 <option value="2">Italian</option>
 </select>
 
-</td>
-</tr>
+</td></tr>
+
 <tr>
 <td>Total weight:</td>
 <td><input id="amount"  class="field" type="text" size="5" value="50"> lbs</td>
@@ -258,7 +254,7 @@ function calculate() {
 <td><input id="bags"  class="field" style="border:0px" type="text" size="5" value="" readonly></td>
 </tr>
 <tr>
-<td colspan="2"><input class="button" type="button" value="Calculate" onclick="calculate();"></td>
+<td colspan="2"><button class="button" onclick="calculate();">Calculate</button></td>
 </tr>
 </table>
 
@@ -266,12 +262,13 @@ function calculate() {
 
 <td>
 
-<table class="mild"><tr><td><span id="sausageType"></span></td></tr></table><br>
+<table class="mild"><tr><td>
+<span id="sausageType"></span>
+</td></tr></table><br>
 
-<span id="ingredients"></span></td>
+<span id="ingredients"></span>
 
-</tr></table>
-
+</td></tr></table>
 </td></tr></table>
 </td></tr></table>
 </body></html>
