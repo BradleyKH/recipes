@@ -1,21 +1,24 @@
 <html><head><title>Sausage Recipe Calculator</title>
-<meta name="viewport" content="width=device-width, initial-scale=0.75">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style type="text/css">
 BODY {
-background-color: #000000;
+background-color: #FFFFFF;
 background-image: url('pigs.jpg');
 background-attachment: fixed;
 background-position: center center;
 background-repeat: no-repeat;
 font-family: arial;
 font-size: 20px;
+margin: 0px;
 }
 
 .full {
 width: 100%;
 height: 100%;
 text-align: center;
+background-color: #DDDDDD;
+opacity: .9;
 }
 
 .full td {
@@ -23,20 +26,8 @@ text-align: center;
 vertical-align: middle;
 }
 
-.container {
-border: 0px;
-display: inline-block;
-}
-
-.container td {
-background-color: #222222;
-opacity: .9;
-padding: 50px;
-text-align: center;
-}
-
 .title {
-color: #FFFFFF;
+color: #000000;
 font-size: 30px;
 font-family: arial;
 font-weight: bold;
@@ -57,7 +48,7 @@ background-color: transparent;
 text-align: left;
 vertical-align: top;
 cursor: default;
-color: #FFFFFF;
+color: #000000;
 }
 
 .field {
@@ -209,9 +200,7 @@ function calculate() {
 
 <table class="full"><tr><td>
 
-<table class="container"><tr><td>
-
-<div class="title">Sausage Recipe Calculator</div><br><br>
+<div class="title">Sausage Recipe Calculator</div><br>
 
 <table class="content"><tr><td>
 
@@ -258,7 +247,8 @@ function calculate() {
 </tr>
 </table>
 
-</td>
+</td></tr>
+<tr>
 
 <td>
 
@@ -268,7 +258,6 @@ function calculate() {
 
 <span id="ingredients"></span>
 
-</td></tr></table>
 </td></tr></table>
 </td></tr></table>
 </body></html>
