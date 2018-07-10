@@ -1,0 +1,54 @@
+BODY {
+background-color: #FFFFFF;
+font-family: arial;
+font-size: 14px;
+margin: 0px;
+text-align: center;
+}
+
+A {
+color: #004099;
+text-decoration: none;
+font-family: arial;
+font-size: 14px;
+}
+
+A:hover{
+text-decoration: underline;
+}
+
+.stuck {
+width: 100%;
+position: -webkit-sticky;
+position: sticky;
+top: 0px;
+z-index: 3;
+border-collapse: collapse;
+border: 0px;
+background-color: #FFFFFF;
+}
+
+td {
+padding: 5px;
+}
+
+UL {
+list-style-type: none;
+padding: 0px;
+margin: 0px;
+}
+
+LI {
+padding: 5px;
+}
+
+h2 {
+padding: 5px;
+}
+
+h3 {
+position: -webkit-sticky;
+position: sticky;
+z-index: 4;
+top: 5px;
+}
