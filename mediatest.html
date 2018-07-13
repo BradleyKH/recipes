@@ -1,0 +1,188 @@
+<html><head><title>Media test</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+
+BODY {
+font-family: arial;
+margin: 0px;
+}
+
+.flex-container{
+display: flex;
+flex-direction: row;
+}
+
+UL {
+  list-style-type: none;
+}
+
+.menubutton {
+font-size: 30px;
+z-index: 10;
+background-color: transparent;
+border: 0;
+}
+
+.main {
+display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+
+  .closebtncontainer {
+    display: block;
+  }
+
+  .closebtn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    font-size: 40px;
+    color: white;
+    background-color: transparent;
+    border: 0px;
+  }
+
+  UL {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  }
+
+  LI {
+  padding: 10px;
+  background-color: #404040;
+  width: 100%;
+  text-align: center;
+  border: 0px;
+  margin: 0px;
+  }
+
+  LI > A {
+  color: #FFFFFF;
+  }
+
+}
+
+@media only screen and (min-width: 601px) {
+  .menubuttoncontainer{
+    display: none;
+  }
+
+  .closebtncontainer {
+    display: none;
+  }
+
+  .navbar{
+    display: flex;
+  }
+
+  UL {
+  margin: 0px;
+  padding: 10px;
+  }
+
+  LI {
+  padding: 10px;
+  background-color: #BBBBBB;
+  width: 100px;
+  text-align: center;
+  border: 1px solid #808080;
+  }
+
+}
+
+</style>
+
+<script language="javascript">
+
+function showNavbar() {
+	document.getElementById('navbar').style.display = 'flex';
+}
+
+function hideNavbar() {
+	document.getElementById('navbar').style.display = '';
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="flex-container">
+
+<div class="menubuttoncontainer">
+<button class="menubutton" onclick="showNavbar();">&#9776;</button>
+</div>
+
+<div class="navbar" id="navbar">
+<span class="closebtncontainer"><button onclick="hideNavbar();" class="closebtn">&times;</button></span>
+<ul>
+ <li><a href="#">Link 1</a>
+ <li><a href="#">Link 2</a>
+ <li><a href="#">Link 3</a>
+ <li><a href="#">Link 4</a>
+ <li><a href="#">Link 5</a>
+ <li><a href="#">Link 6</a>
+ <li><a href="#">Link 7</a>
+ <li><a href="#">Link 8</a>
+</ul>
+</div>
+
+<div class="main" id="main">
+<h1>Title</h1>
+<p>Lots of content goes here.</p>
+<p>Lots of content goes here.</p>
+<p>Lots of content goes here.</p>
+<br><br>
+<p>Lots of content goes here.</p>
+<p>Lots of content goes here.</p>
+<p>Lots of content goes here.</p>
+<br><br>
+<p>Lots of content goes here.</p>
+<p>Lots of content goes here.</p>
+<p>Lots of content goes here.</p>
+<br><br>
+<p>Lots of content goes here.</p>
+<p>Lots of content goes here.</p>
+<p>Lots of content goes here.</p>
+<br><br>
+<p>Lots of content goes here.</p>
+<p>Lots of content goes here.</p>
+<p>Lots of content goes here.</p>
+<br><br>
+<p>Lots of content goes here.</p>
+<p>Lots of content goes here.</p>
+<p>Lots of content goes here.</p>
+<br><br>
+<p>Lots of content goes here.</p>
+<p>Lots of content goes here.</p>
+<p>Lots of content goes here.</p>
+<br><br>
+<p>Lots of content goes here.</p>
+<p>Lots of content goes here.</p>
+<p>Lots of content goes here.</p>
+<br><br>
+<p>Lots of content goes here.</p>
+<p>Lots of content goes here.</p>
+<p>Lots of content goes here.</p>
+<br><br>
+
+</div>
+
+</div>
+</body></html>
