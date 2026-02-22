@@ -1,205 +1,6 @@
-let sausageTypes = ["Brats", "Breakfast", "Italian"];
-let families = ["Brad", "Charles", "Frank", "Jerry", "Ross"];
+const ingredients = ["Pepper", "Fennel", "Sage", "Salt", "Red Pepper"];
 
-let ingredientsBrats = [
-    [
-        "Brad's Kosher Salt",
-        "White Pepper",
-        "Marjoram",
-        "Carraway Seed",
-        "Nutmeg",
-        "Allspice",
-        "Ginger",
-        "Garlic Powder",
-        "Red Pepper Flakes",
-    ],
-    [
-        "Kosher Salt",
-        "White Pepper",
-        "Marjoram",
-        "Carraway Seed",
-        "Nutmeg",
-        "Allspice",
-        "Ginger",
-        "Garlic Powder",
-        "Red Pepper Flakes",
-    ],
-    [
-        "Frank's Kosher Salt",
-        "White Pepper",
-        "Marjoram",
-        "Carraway Seed",
-        "Nutmeg",
-        "Allspice",
-        "Ginger",
-        "Garlic Powder",
-        "Red Pepper Flakes",
-    ],
-    [
-        "Jerry's Kosher Salt",
-        "White Pepper",
-        "Marjoram",
-        "Carraway Seed",
-        "Nutmeg",
-        "Allspice",
-        "Ginger",
-        "Garlic Powder",
-        "Red Pepper Flakes",
-    ],
-    [
-        "Ross' Kosher Salt",
-        "White Pepper",
-        "Marjoram",
-        "Carraway Seed",
-        "Nutmeg",
-        "Allspice",
-        "Ginger",
-        "Garlic Powder",
-        "Red Pepper Flakes",
-    ],
-];
-
-let ingredientsBreakfast = [
-    [
-        "Brad's Kosher Salt",
-        "White Pepper",
-        "Marjoram",
-        "Carraway Seed",
-        "Nutmeg",
-        "Allspice",
-        "Ginger",
-        "Garlic Powder",
-        "Red Pepper Flakes",
-    ],
-    [
-        "Kosher Salt",
-        "White Pepper",
-        "Marjoram",
-        "Carraway Seed",
-        "Nutmeg",
-        "Allspice",
-        "Ginger",
-        "Garlic Powder",
-        "Red Pepper Flakes",
-    ],
-    [
-        "Frank's Kosher Salt",
-        "White Pepper",
-        "Marjoram",
-        "Carraway Seed",
-        "Nutmeg",
-        "Allspice",
-        "Ginger",
-        "Garlic Powder",
-        "Red Pepper Flakes",
-    ],
-    [
-        "Jerry's Kosher Salt",
-        "White Pepper",
-        "Marjoram",
-        "Carraway Seed",
-        "Nutmeg",
-        "Allspice",
-        "Ginger",
-        "Garlic Powder",
-        "Red Pepper Flakes",
-    ],
-    [
-        "Ross' Kosher Salt",
-        "White Pepper",
-        "Marjoram",
-        "Carraway Seed",
-        "Nutmeg",
-        "Allspice",
-        "Ginger",
-        "Garlic Powder",
-        "Red Pepper Flakes",
-    ],
-];
-
-let ingredientsItalian = [
-    [
-        "Brad's Kosher Salt",
-        "White Pepper",
-        "Marjoram",
-        "Carraway Seed",
-        "Nutmeg",
-        "Allspice",
-        "Ginger",
-        "Garlic Powder",
-        "Red Pepper Flakes",
-    ],
-    [
-        "Kosher Salt",
-        "White Pepper",
-        "Marjoram",
-        "Carraway Seed",
-        "Nutmeg",
-        "Allspice",
-        "Ginger",
-        "Garlic Powder",
-        "Red Pepper Flakes",
-    ],
-    [
-        "Frank's Kosher Salt",
-        "White Pepper",
-        "Marjoram",
-        "Carraway Seed",
-        "Nutmeg",
-        "Allspice",
-        "Ginger",
-        "Garlic Powder",
-        "Red Pepper Flakes",
-    ],
-    [
-        "Jerry's Kosher Salt",
-        "White Pepper",
-        "Marjoram",
-        "Carraway Seed",
-        "Nutmeg",
-        "Allspice",
-        "Ginger",
-        "Garlic Powder",
-        "Red Pepper Flakes",
-    ],
-    [
-        "Ross' Kosher Salt",
-        "White Pepper",
-        "Marjoram",
-        "Carraway Seed",
-        "Nutmeg",
-        "Allspice",
-        "Ginger",
-        "Garlic Powder",
-        "Red Pepper Flakes",
-    ],
-];
-
-// Ingredient ratios: amounts in tsp for every 12 pounds - eventually need to make 12 another variable
-let ratiosBrats = [
-    [8, 8, 8, 8, 8, 8, 8, 8, 8],
-    [12, 8, 4, 2, 2, 2, 1, 9, 2],
-    [2, 2, 2, 2, 2, 2, 2, 2, 2],
-    [3, 3, 3, 3, 3, 3, 3, 3, 3],
-    [4, 4, 4, 4, 4, 4, 4, 4, 4],
-];
-let ratiosBreakfast = [
-    [5, 5, 5, 5, 5, 5, 5, 5, 5],
-    [6, 6, 6, 6, 6, 6, 6, 6, 6],
-    [7, 7, 7, 7, 7, 7, 7, 7, 7],
-    [8, 8, 8, 8, 8, 8, 8, 8, 8],
-    [9, 9, 9, 9, 9, 9, 9, 9, 9],
-];
-let ratiosItalian = [
-    [5, 5, 5, 5, 5, 5, 5, 5, 5],
-    [6, 6, 6, 6, 6, 6, 6, 6, 6],
-    [7, 7, 7, 7, 7, 7, 7, 7, 7],
-    [8, 8, 8, 8, 8, 8, 8, 8, 8],
-    [9, 9, 9, 9, 9, 9, 9, 9, 9],
-];
-
-let ratios = [ratiosBrats, ratiosBreakfast, ratiosItalian];
-let ingredients = [ingredientsBrats, ingredientsBreakfast, ingredientsItalian];
+const ingredientRatios = [4, 36, 3, 9, 3];
 
 function round(value, decimals) {
     return Number(Math.round(value + "e" + decimals) + "e-" + decimals);
@@ -247,25 +48,16 @@ function convert(tsp) {
 
 function calculate() {
     let pounds = document.getElementById("amount").value;
-    let selectedSausage = document.getElementById("sausage").value;
-    let selectedFamily = document.getElementById("family").value;
 
     // Build a <dl> for the ingredient list
     let html = "";
-    for (let s = 0; s < ingredients[selectedSausage][selectedFamily].length; s++) {
-        html += "<dt>" + ingredients[selectedSausage][selectedFamily][s] + "</dt>";
-        html += "<dd>" + convert((pounds * ratios[selectedSausage][selectedFamily][s]) / 12) + "</dd>";
+    for (let i = 0; i < ingredients.length; i++) {
+        html += "<dt>" + ingredients[i] + "</dt>";
+        html += "<dd>" + convert((pounds * ingredientRatios[i]) / 12) + "</dd>";
     }
 
     document.getElementById("bags").textContent = Math.ceil(pounds / document.getElementById("bagweight").value);
-    document.getElementById("sausageType").innerHTML =
-        "<strong>" +
-        sausageTypes[selectedSausage] +
-        " Recipe</strong> &mdash; " +
-        families[selectedFamily] +
-        " &bull; " +
-        pounds +
-        " lbs";
+    document.getElementById("sausageType").innerHTML = pounds + " lbs";
     document.getElementById("ingredients").innerHTML = html;
 }
 
